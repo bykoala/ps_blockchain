@@ -29,3 +29,8 @@ func (b *Block) SetHash(){
 	hash := sha256.Sum256(headers)
 	b.Hash = hash[:]
 }
+
+//NewGenesisBlock creates and returns genesis Block
+func NewGenesisBlock() *Block{
+	return NewBlock("Genesis Block",[]byte{})
+}
